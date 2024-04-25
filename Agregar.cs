@@ -133,7 +133,7 @@ namespace Proyecto_de_catedra
         private void Agregar_Load(object sender, EventArgs e)
         {
             // Quita el borde del control DateTimePicker
-            dateTimePicker1.BorderStyle = BorderStyle.None;
+            dtpfecha.BorderStyle = BorderStyle.None;
         }
         private void txtdireccion_TextChanged(object sender, EventArgs e)
         {
