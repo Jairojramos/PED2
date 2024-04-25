@@ -66,7 +66,7 @@
             txtuser.BorderStyle = BorderStyle.None;
             txtuser.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtuser.ForeColor = Color.DimGray;
-            txtuser.Location = new Point(480, 169);
+            txtuser.Location = new Point(480, 167);
             txtuser.Name = "txtuser";
             txtuser.Size = new Size(265, 19);
             txtuser.TabIndex = 10;
@@ -90,7 +90,7 @@
             txtpass.BorderStyle = BorderStyle.None;
             txtpass.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtpass.ForeColor = Color.DimGray;
-            txtpass.Location = new Point(480, 284);
+            txtpass.Location = new Point(480, 283);
             txtpass.Name = "txtpass";
             txtpass.PasswordChar = '*';
             txtpass.Size = new Size(265, 19);
@@ -108,7 +108,7 @@
             btnRegresar.FlatStyle = FlatStyle.Flat;
             btnRegresar.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegresar.ForeColor = Color.White;
-            btnRegresar.Location = new Point(85, 341);
+            btnRegresar.Location = new Point(87, 338);
             btnRegresar.Margin = new Padding(0);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(212, 34);
@@ -136,7 +136,7 @@
             txtcorreo.BorderStyle = BorderStyle.None;
             txtcorreo.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtcorreo.ForeColor = Color.DimGray;
-            txtcorreo.Location = new Point(476, 227);
+            txtcorreo.Location = new Point(476, 226);
             txtcorreo.Name = "txtcorreo";
             txtcorreo.Size = new Size(265, 19);
             txtcorreo.TabIndex = 20;

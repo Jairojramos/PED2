@@ -15,6 +15,9 @@ namespace Proyecto_de_catedra
     {
         // Cadena de conexión a la base de datos
         private string cadenaConexion = "Server=DESKTOP-C340CT0;Database=Contactos;integrated security=True;";
+        
+        // Propiedad pública para el nombre de usuario
+        public string NombreUsuario { get; private set; }
         public Login()
         {
             InitializeComponent();
@@ -49,6 +52,9 @@ namespace Proyecto_de_catedra
 
                     if (cantidadUsuarios > 0)
                     {
+                        // Si el inicio de sesión es exitoso, establece el nombre de usuario
+                        NombreUsuario = usuario;
+
                         // Inicio de sesión exitoso
                         MessageBox.Show($"¡Bienvenida/o, {usuario}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();

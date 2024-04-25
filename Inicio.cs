@@ -10,14 +10,18 @@ using System.Windows.Forms;
 
 namespace Proyecto_de_catedra
 {
+    
     public partial class Inicio : Form
     {
         private Login login; // Referencia al formulario de inicio de sesión
+        private string nombreUsuario; // Variable para almacenar el nombre de usuario
+
         public Inicio(Login login, string nombreUsuario)
         {
             InitializeComponent();
             this.login = login; // Asignar el formulario de inicio de sesión
-            MostrarSaludo(nombreUsuario); // Mostrar el saludo al usuario
+            this.nombreUsuario = nombreUsuario; // Guardar el nombre de usuario
+            MostrarSaludo(); // Mostrar el saludo al usuario
             CambiarImagenSegunHora(); // Cambiar la imagen según la hora del día
         }
 
@@ -36,7 +40,7 @@ namespace Proyecto_de_catedra
                 login.Show(); // Muestra el formulario de inicio de sesión
             }
         }
-        private void MostrarSaludo(string nombreUsuario)
+        private void MostrarSaludo()
         {
             string saludo = ObtenerSaludo();
             lblsaludo.Text = $"{saludo}, {nombreUsuario}"; // Mostrar el saludo con el nombre del usuario
@@ -78,6 +82,18 @@ namespace Proyecto_de_catedra
         private void Inicio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Obtener el nombre de usuario desde el formulario de inicio de sesión
+            string nombreUsuario = login.NombreUsuario;
+
+            // Crear una instancia del formulario "Agregar" y pasar el nombre de usuario al constructor
+            Agregar formulario = new Agregar(nombreUsuario);
+
+            // Mostrar el formulario como una ventana modal
+            formulario.ShowDialog();
         }
     }
 }

@@ -122,6 +122,7 @@
             button1.TabIndex = 24;
             button1.Text = "\r\n\r\nAgregar contacto";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pictureBox4
             // 
