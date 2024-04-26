@@ -33,31 +33,31 @@
             btnCerrar = new Button();
             lblsaludo = new Label();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            pbagregar = new PictureBox();
+            pictureBox8 = new PictureBox();
+            label2 = new Label();
+            label1 = new Label();
             pictureBox4 = new PictureBox();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            pictureBox3 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
+            label3 = new Label();
+            pictureBox9 = new PictureBox();
+            label4 = new Label();
+            pictureBox10 = new PictureBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbagregar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.FromArgb(240, 239, 240);
+            pictureBox2.BackColor = Color.White;
             pictureBox2.Cursor = Cursors.Hand;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(734, 26);
+            pictureBox2.Location = new Point(692, 25);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(36, 31);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -67,13 +67,16 @@
             // 
             // btnCerrar
             // 
-            btnCerrar.BackColor = Color.Transparent;
+            btnCerrar.BackColor = Color.White;
             btnCerrar.Cursor = Cursors.Hand;
+            btnCerrar.FlatAppearance.BorderColor = SystemColors.ButtonFace;
             btnCerrar.FlatAppearance.BorderSize = 0;
+            btnCerrar.FlatAppearance.MouseDownBackColor = SystemColors.ButtonFace;
+            btnCerrar.FlatAppearance.MouseOverBackColor = SystemColors.ButtonFace;
             btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCerrar.ForeColor = Color.Red;
-            btnCerrar.Location = new Point(644, 27);
+            btnCerrar.Location = new Point(602, 26);
             btnCerrar.Margin = new Padding(0);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.RightToLeft = RightToLeft.No;
@@ -87,6 +90,7 @@
             // lblsaludo
             // 
             lblsaludo.AutoSize = true;
+            lblsaludo.BackColor = Color.White;
             lblsaludo.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblsaludo.Location = new Point(101, 38);
             lblsaludo.Name = "lblsaludo";
@@ -95,7 +99,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.FromArgb(240, 239, 240);
+            pictureBox1.BackColor = Color.White;
             pictureBox1.Location = new Point(33, 24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(57, 49);
@@ -103,196 +107,157 @@
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // pbagregar
             // 
-            button1.BackColor = Color.FromArgb(151, 203, 251);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(151, 203, 251);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(151, 203, 251);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(151, 203, 251);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 12.75F, FontStyle.Bold);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(98, 123);
-            button1.Margin = new Padding(0);
-            button1.Name = "button1";
-            button1.RightToLeft = RightToLeft.No;
-            button1.Size = new Size(200, 340);
-            button1.TabIndex = 24;
-            button1.Text = "\r\n\r\nAgregar contacto";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            pbagregar.BackColor = Color.WhiteSmoke;
+            pbagregar.Cursor = Cursors.Hand;
+            pbagregar.Image = (Image)resources.GetObject("pbagregar.Image");
+            pbagregar.Location = new Point(65, 119);
+            pbagregar.Name = "pbagregar";
+            pbagregar.Size = new Size(218, 320);
+            pbagregar.SizeMode = PictureBoxSizeMode.Zoom;
+            pbagregar.TabIndex = 25;
+            pbagregar.TabStop = false;
+            pbagregar.Click += pictureBox4_Click;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.WhiteSmoke;
+            pictureBox8.Cursor = Cursors.Hand;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(296, 119);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(189, 172);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 34;
+            pictureBox8.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.WhiteSmoke;
+            label2.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(105, 120, 147);
+            label2.Location = new Point(101, 403);
+            label2.Name = "label2";
+            label2.Size = new Size(140, 18);
+            label2.TabIndex = 35;
+            label2.Text = "Agregar contacto";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.WhiteSmoke;
+            label1.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(105, 120, 147);
+            label1.Location = new Point(307, 266);
+            label1.Name = "label1";
+            label1.Size = new Size(167, 18);
+            label1.TabIndex = 36;
+            label1.Text = "Ver lista de contactos";
             // 
             // pictureBox4
             // 
-            pictureBox4.BackColor = Color.FromArgb(151, 203, 251);
+            pictureBox4.BackColor = Color.WhiteSmoke;
             pictureBox4.Cursor = Cursors.Hand;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(164, 206);
+            pictureBox4.Location = new Point(296, 299);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(76, 65);
+            pictureBox4.Size = new Size(189, 140);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 25;
+            pictureBox4.TabIndex = 37;
             pictureBox4.TabStop = false;
             // 
-            // button2
+            // label3
             // 
-            button2.BackColor = Color.FromArgb(255, 192, 159);
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 159);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 159);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 159);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 12.75F, FontStyle.Bold);
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(298, 123);
-            button2.Margin = new Padding(0);
-            button2.Name = "button2";
-            button2.RightToLeft = RightToLeft.No;
-            button2.Size = new Size(198, 170);
-            button2.TabIndex = 26;
-            button2.Text = "\r\n\r\n\r\nVer lista de contactos";
-            button2.UseVisualStyleBackColor = false;
+            label3.AutoSize = true;
+            label3.BackColor = Color.WhiteSmoke;
+            label3.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(105, 120, 147);
+            label3.Location = new Point(339, 405);
+            label3.Name = "label3";
+            label3.Size = new Size(105, 18);
+            label3.TabIndex = 38;
+            label3.Text = "Clasificación";
             // 
-            // button3
+            // pictureBox9
             // 
-            button3.BackColor = Color.FromArgb(252, 245, 199);
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderColor = Color.FromArgb(252, 245, 199);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(252, 245, 199);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(252, 245, 199);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 12.75F, FontStyle.Bold);
-            button3.ForeColor = Color.Black;
-            button3.Location = new Point(496, 123);
-            button3.Margin = new Padding(0);
-            button3.Name = "button3";
-            button3.RightToLeft = RightToLeft.No;
-            button3.Size = new Size(198, 170);
-            button3.TabIndex = 27;
-            button3.Text = "\r\n\r\n\r\nRealizar busqueda";
-            button3.UseVisualStyleBackColor = false;
+            pictureBox9.BackColor = Color.WhiteSmoke;
+            pictureBox9.Cursor = Cursors.Hand;
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(497, 299);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(189, 140);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 39;
+            pictureBox9.TabStop = false;
             // 
-            // button4
+            // label4
             // 
-            button4.BackColor = Color.FromArgb(255, 238, 147);
-            button4.Cursor = Cursors.Hand;
-            button4.FlatAppearance.BorderColor = Color.FromArgb(255, 238, 147);
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 238, 147);
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 238, 147);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Century Gothic", 12.75F, FontStyle.Bold);
-            button4.ForeColor = Color.Black;
-            button4.Location = new Point(298, 293);
-            button4.Margin = new Padding(0);
-            button4.Name = "button4";
-            button4.RightToLeft = RightToLeft.No;
-            button4.Size = new Size(198, 170);
-            button4.TabIndex = 28;
-            button4.Text = "\r\n\r\n\r\nClasificación de contactos";
-            button4.UseVisualStyleBackColor = false;
+            label4.AutoSize = true;
+            label4.BackColor = Color.WhiteSmoke;
+            label4.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(105, 120, 147);
+            label4.Location = new Point(533, 405);
+            label4.Name = "label4";
+            label4.Size = new Size(114, 18);
+            label4.TabIndex = 40;
+            label4.Text = "Configuración";
             // 
-            // button5
+            // pictureBox10
             // 
-            button5.BackColor = Color.FromArgb(173, 247, 182);
-            button5.Cursor = Cursors.Hand;
-            button5.FlatAppearance.BorderColor = Color.FromArgb(173, 247, 182);
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(173, 247, 182);
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(173, 247, 182);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Century Gothic", 12.75F, FontStyle.Bold);
-            button5.ForeColor = Color.Black;
-            button5.Location = new Point(496, 293);
-            button5.Margin = new Padding(0);
-            button5.Name = "button5";
-            button5.RightToLeft = RightToLeft.No;
-            button5.Size = new Size(198, 170);
-            button5.TabIndex = 29;
-            button5.Text = "\r\n\r\nConfiguración";
-            button5.UseVisualStyleBackColor = false;
+            pictureBox10.BackColor = Color.WhiteSmoke;
+            pictureBox10.Cursor = Cursors.Hand;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(497, 119);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(189, 172);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 41;
+            pictureBox10.TabStop = false;
             // 
-            // pictureBox3
+            // label5
             // 
-            pictureBox3.BackColor = Color.FromArgb(252, 245, 199);
-            pictureBox3.Cursor = Cursors.Hand;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(556, 144);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(76, 65);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 30;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackColor = Color.FromArgb(255, 192, 159);
-            pictureBox5.Cursor = Cursors.Hand;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(364, 144);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(76, 65);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 31;
-            pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.BackColor = Color.FromArgb(255, 238, 147);
-            pictureBox6.Cursor = Cursors.Hand;
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(364, 306);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(76, 65);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 32;
-            pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.BackColor = Color.FromArgb(173, 247, 182);
-            pictureBox7.Cursor = Cursors.Hand;
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(556, 306);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(76, 65);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 33;
-            pictureBox7.TabStop = false;
+            label5.AutoSize = true;
+            label5.BackColor = Color.WhiteSmoke;
+            label5.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(105, 120, 147);
+            label5.Location = new Point(520, 266);
+            label5.Name = "label5";
+            label5.Size = new Size(145, 18);
+            label5.TabIndex = 42;
+            label5.Text = "Realizar busqueda";
             // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(793, 547);
-            Controls.Add(pictureBox7);
-            Controls.Add(pictureBox6);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox3);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            BackColor = Color.White;
+            ClientSize = new Size(756, 507);
+            Controls.Add(label5);
+            Controls.Add(pictureBox10);
+            Controls.Add(label4);
+            Controls.Add(pictureBox9);
+            Controls.Add(label3);
             Controls.Add(pictureBox4);
-            Controls.Add(button1);
+            Controls.Add(label1);
+            Controls.Add(label2);
+            Controls.Add(pictureBox8);
             Controls.Add(pictureBox1);
             Controls.Add(lblsaludo);
             Controls.Add(pictureBox2);
             Controls.Add(btnCerrar);
+            Controls.Add(pbagregar);
             Name = "Inicio";
             Text = "Inicio";
             Load += Inicio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbagregar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -302,15 +267,15 @@
         private Button btnCerrar;
         private Label lblsaludo;
         private PictureBox pictureBox1;
-        private Button button1;
+        private PictureBox pbagregar;
+        private PictureBox pictureBox8;
+        private Label label2;
+        private Label label1;
         private PictureBox pictureBox4;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
+        private Label label3;
+        private PictureBox pictureBox9;
+        private Label label4;
+        private PictureBox pictureBox10;
+        private Label label5;
     }
 }

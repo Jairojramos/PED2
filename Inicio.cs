@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Proyecto_de_catedra
 {
-    
+
     public partial class Inicio : Form
     {
         private Login login; // Referencia al formulario de inicio de sesión
@@ -83,16 +83,21 @@ namespace Proyecto_de_catedra
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
+            // Desactivar el formulario principal para dar un efecto de desenfoque
+            this.Enabled = false;
+
             // Obtener el nombre de usuario desde el formulario de inicio de sesión
             string nombreUsuario = login.NombreUsuario;
 
             // Crear una instancia del formulario "Agregar" y pasar el nombre de usuario al constructor
             Agregar formulario = new Agregar(nombreUsuario);
 
-            // Mostrar el formulario como una ventana modal
+            // Suscribirse al evento FormClosed del formulario "Agregar"
+            formulario.FormClosed += (s, args) => this.Enabled = true;
+
+            // Mostrar el formulario "Agregar" como una ventana modal
             formulario.ShowDialog();
         }
     }

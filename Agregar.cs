@@ -238,10 +238,22 @@ namespace Proyecto_de_catedra
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            // Cierra el formulario actual (Agregar) y muestra el formulario de Inicio
+            // Cierra el formulario actual (Agregar)
             this.Close();
-            // Muestra el formulario de Inicio si ya está creado
-            Application.OpenForms["Inicio"]?.Show();
+
+            // Muestra el formulario de Inicio si ya está creado y activo
+            Inicio inicioForm = Application.OpenForms["Inicio"] as Inicio;
+            if (inicioForm != null && inicioForm.Visible)
+            {
+                inicioForm.WindowState = FormWindowState.Normal; // Asegura que el formulario esté restaurado
+                inicioForm.Activate(); // Dar foco al formulario de inicio
+            }
+            else
+            {
+                // Si el formulario de inicio no está creado o no está activo, crea una nueva instancia y muéstralo
+                Inicio nuevoInicioForm = new Inicio();
+                nuevoInicioForm.Show();
+            }
         }
     }
 }
