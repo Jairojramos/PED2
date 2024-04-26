@@ -38,7 +38,7 @@
             dtpfecha = new DateTimePicker();
             txttelefono = new TextBox();
             btnagregar = new Button();
-            txtcuidad = new TextBox();
+            txtciudad = new TextBox();
             pictureBox1 = new PictureBox();
             pictureBox4 = new PictureBox();
             label1 = new Label();
@@ -65,7 +65,7 @@
             // 
             pictureBox3.BackColor = SystemColors.Control;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(-184, 36);
+            pictureBox3.Location = new Point(-247, -1);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(1214, 587);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -79,9 +79,9 @@
             txtnombre.BorderStyle = BorderStyle.None;
             txtnombre.Font = new Font("Century Gothic", 9.75F);
             txtnombre.ForeColor = Color.Black;
-            txtnombre.Location = new Point(493, 129);
+            txtnombre.Location = new Point(435, 92);
             txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(102, 16);
+            txtnombre.Size = new Size(97, 16);
             txtnombre.TabIndex = 14;
             // 
             // txtapellido
@@ -90,7 +90,7 @@
             txtapellido.BorderStyle = BorderStyle.None;
             txtapellido.Font = new Font("Century Gothic", 9.75F);
             txtapellido.ForeColor = Color.Black;
-            txtapellido.Location = new Point(622, 129);
+            txtapellido.Location = new Point(562, 92);
             txtapellido.Name = "txtapellido";
             txtapellido.Size = new Size(97, 16);
             txtapellido.TabIndex = 15;
@@ -101,7 +101,7 @@
             txtcorreo.BorderStyle = BorderStyle.None;
             txtcorreo.Font = new Font("Century Gothic", 9.75F);
             txtcorreo.ForeColor = Color.Black;
-            txtcorreo.Location = new Point(494, 200);
+            txtcorreo.Location = new Point(434, 163);
             txtcorreo.Name = "txtcorreo";
             txtcorreo.Size = new Size(225, 16);
             txtcorreo.TabIndex = 16;
@@ -112,7 +112,7 @@
             txtdireccion.BorderStyle = BorderStyle.None;
             txtdireccion.Font = new Font("Century Gothic", 9.75F);
             txtdireccion.ForeColor = Color.Black;
-            txtdireccion.Location = new Point(496, 269);
+            txtdireccion.Location = new Point(436, 232);
             txtdireccion.Name = "txtdireccion";
             txtdireccion.Size = new Size(223, 16);
             txtdireccion.TabIndex = 17;
@@ -126,7 +126,7 @@
             cmbpais.ForeColor = Color.Black;
             cmbpais.FormattingEnabled = true;
             cmbpais.Items.AddRange(new object[] { "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Argentina", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia del Norte", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República del Congo", "República Democrática del Congo", "República Dominicana", "Ruanda", "Rumania", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudáfrica", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zimbabue" });
-            cmbpais.Location = new Point(621, 333);
+            cmbpais.Location = new Point(560, 297);
             cmbpais.Name = "cmbpais";
             cmbpais.Size = new Size(100, 25);
             cmbpais.TabIndex = 19;
@@ -138,7 +138,7 @@
             dtpfecha.CalendarTitleForeColor = Color.Transparent;
             dtpfecha.Font = new Font("Century Gothic", 9.75F);
             dtpfecha.Format = DateTimePickerFormat.Short;
-            dtpfecha.Location = new Point(495, 402);
+            dtpfecha.Location = new Point(432, 365);
             dtpfecha.Name = "dtpfecha";
             dtpfecha.Size = new Size(100, 23);
             dtpfecha.TabIndex = 20;
@@ -149,7 +149,7 @@
             txttelefono.BorderStyle = BorderStyle.None;
             txttelefono.Font = new Font("Century Gothic", 9.75F);
             txttelefono.ForeColor = Color.Black;
-            txttelefono.Location = new Point(622, 403);
+            txttelefono.Location = new Point(561, 367);
             txttelefono.Name = "txttelefono";
             txttelefono.Size = new Size(99, 16);
             txttelefono.TabIndex = 21;
@@ -165,7 +165,7 @@
             btnagregar.FlatStyle = FlatStyle.Flat;
             btnagregar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnagregar.ForeColor = Color.White;
-            btnagregar.Location = new Point(496, 542);
+            btnagregar.Location = new Point(433, 504);
             btnagregar.Margin = new Padding(0);
             btnagregar.Name = "btnagregar";
             btnagregar.Size = new Size(220, 41);
@@ -174,22 +174,22 @@
             btnagregar.UseVisualStyleBackColor = false;
             btnagregar.Click += btnagregar_Click;
             // 
-            // txtcuidad
+            // txtciudad
             // 
-            txtcuidad.BackColor = Color.White;
-            txtcuidad.BorderStyle = BorderStyle.None;
-            txtcuidad.Font = new Font("Century Gothic", 9.75F);
-            txtcuidad.ForeColor = Color.Black;
-            txtcuidad.Location = new Point(493, 338);
-            txtcuidad.Name = "txtcuidad";
-            txtcuidad.Size = new Size(103, 16);
-            txtcuidad.TabIndex = 23;
+            txtciudad.BackColor = Color.White;
+            txtciudad.BorderStyle = BorderStyle.None;
+            txtciudad.Font = new Font("Century Gothic", 9.75F);
+            txtciudad.ForeColor = Color.Black;
+            txtciudad.Location = new Point(433, 302);
+            txtciudad.Name = "txtciudad";
+            txtciudad.Size = new Size(99, 16);
+            txtciudad.TabIndex = 23;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.White;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(732, 545);
+            pictureBox1.Location = new Point(670, 508);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(36, 33);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -199,20 +199,23 @@
             // 
             // pictureBox4
             // 
+            pictureBox4.BackColor = Color.FromArgb(250, 251, 252);
+            pictureBox4.Cursor = Cursors.Hand;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(10, 16);
+            pictureBox4.Location = new Point(14, 16);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(50, 45);
+            pictureBox4.Size = new Size(35, 34);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 24;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.White;
+            label1.BackColor = Color.FromArgb(250, 251, 252);
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(137, 67);
+            label1.Location = new Point(76, 35);
             label1.Name = "label1";
             label1.Size = new Size(220, 28);
             label1.TabIndex = 25;
@@ -226,7 +229,7 @@
             cmbgrupo.ForeColor = Color.Black;
             cmbgrupo.FormattingEnabled = true;
             cmbgrupo.Items.AddRange(new object[] { "Amigo", "Familia", "Trabajo", "Clientes", "Proveedores" });
-            cmbgrupo.Location = new Point(496, 467);
+            cmbgrupo.Location = new Point(433, 430);
             cmbgrupo.Name = "cmbgrupo";
             cmbgrupo.Size = new Size(99, 25);
             cmbgrupo.TabIndex = 28;
@@ -239,7 +242,7 @@
             cmborg.ForeColor = Color.Black;
             cmborg.FormattingEnabled = true;
             cmborg.Items.AddRange(new object[] { "Empresa", "Institución educativa", "Organización sin fines de lucro", "Gobierno", "ONG", "Startup", "Asociación", "Agencia gubernamental", "Consultoría", "Fundación", "Educación", "Salud", "Tecnología", "Medios", "Finanzas", "Entretenimiento", "Agricultura", "Transporte" });
-            cmborg.Location = new Point(621, 467);
+            cmborg.Location = new Point(558, 430);
             cmborg.Name = "cmborg";
             cmborg.Size = new Size(100, 25);
             cmborg.TabIndex = 29;
@@ -248,7 +251,7 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(250, 251, 252);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(60, 120);
+            pictureBox2.Location = new Point(-3, 88);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(370, 439);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -261,7 +264,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(105, 120, 147);
-            label2.Location = new Point(488, 92);
+            label2.Location = new Point(425, 55);
             label2.Name = "label2";
             label2.Size = new Size(65, 16);
             label2.TabIndex = 31;
@@ -273,7 +276,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(105, 120, 147);
-            label3.Location = new Point(621, 92);
+            label3.Location = new Point(558, 55);
             label3.Name = "label3";
             label3.Size = new Size(69, 16);
             label3.TabIndex = 32;
@@ -285,7 +288,7 @@
             label4.BackColor = Color.White;
             label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(105, 120, 147);
-            label4.Location = new Point(488, 166);
+            label4.Location = new Point(425, 129);
             label4.Name = "label4";
             label4.Size = new Size(128, 16);
             label4.TabIndex = 33;
@@ -297,7 +300,7 @@
             label5.BackColor = Color.White;
             label5.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(105, 120, 147);
-            label5.Location = new Point(488, 237);
+            label5.Location = new Point(425, 200);
             label5.Name = "label5";
             label5.Size = new Size(69, 16);
             label5.TabIndex = 34;
@@ -309,11 +312,11 @@
             label6.BackColor = Color.White;
             label6.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(105, 120, 147);
-            label6.Location = new Point(488, 306);
+            label6.Location = new Point(425, 269);
             label6.Name = "label6";
             label6.Size = new Size(56, 16);
             label6.TabIndex = 35;
-            label6.Text = "Cuidad";
+            label6.Text = "Ciudad";
             // 
             // label7
             // 
@@ -321,7 +324,7 @@
             label7.BackColor = Color.White;
             label7.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label7.ForeColor = Color.FromArgb(105, 120, 147);
-            label7.Location = new Point(622, 306);
+            label7.Location = new Point(559, 269);
             label7.Name = "label7";
             label7.Size = new Size(32, 16);
             label7.TabIndex = 36;
@@ -333,7 +336,7 @@
             label8.BackColor = Color.White;
             label8.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label8.ForeColor = Color.FromArgb(105, 120, 147);
-            label8.Location = new Point(489, 373);
+            label8.Location = new Point(426, 336);
             label8.Name = "label8";
             label8.Size = new Size(123, 16);
             label8.TabIndex = 37;
@@ -345,7 +348,7 @@
             label9.BackColor = Color.White;
             label9.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label9.ForeColor = Color.FromArgb(105, 120, 147);
-            label9.Location = new Point(618, 372);
+            label9.Location = new Point(555, 335);
             label9.Name = "label9";
             label9.Size = new Size(61, 16);
             label9.TabIndex = 38;
@@ -357,7 +360,7 @@
             label10.BackColor = Color.White;
             label10.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label10.ForeColor = Color.FromArgb(105, 120, 147);
-            label10.Location = new Point(489, 439);
+            label10.Location = new Point(426, 402);
             label10.Name = "label10";
             label10.Size = new Size(48, 16);
             label10.TabIndex = 39;
@@ -369,7 +372,7 @@
             label11.BackColor = Color.White;
             label11.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label11.ForeColor = Color.FromArgb(105, 120, 147);
-            label11.Location = new Point(618, 440);
+            label11.Location = new Point(555, 403);
             label11.Name = "label11";
             label11.Size = new Size(96, 16);
             label11.TabIndex = 40;
@@ -379,7 +382,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(862, 657);
+            ClientSize = new Size(721, 581);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
@@ -396,7 +399,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox4);
             Controls.Add(label1);
-            Controls.Add(txtcuidad);
+            Controls.Add(txtciudad);
             Controls.Add(btnagregar);
             Controls.Add(txttelefono);
             Controls.Add(dtpfecha);
@@ -428,7 +431,7 @@
         private DateTimePicker dtpfecha;
         private TextBox txttelefono;
         private Button btnagregar;
-        private TextBox txtcuidad;
+        private TextBox txtciudad;
         private PictureBox pictureBox1;
         private PictureBox pictureBox4;
         private Label label1;

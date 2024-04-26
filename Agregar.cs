@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace Proyecto_de_catedra
 {
@@ -29,7 +30,7 @@ namespace Proyecto_de_catedra
             string correo = txtcorreo.Text;
             string telefono = txttelefono.Text;
             string direccion = txtdireccion.Text;
-            string ciudad = txtcuidad.Text;
+            string ciudad = txtciudad.Text;
             string pais = cmbpais.SelectedItem?.ToString();
             DateTime fechaNacimiento = dtpfecha.Value;
 
@@ -40,6 +41,77 @@ namespace Proyecto_de_catedra
                 string.IsNullOrWhiteSpace(pais))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar nombre
+            if (string.IsNullOrWhiteSpace(txtnombre.Text) || !Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("Por favor ingrese un nombre válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar apellido
+            if (string.IsNullOrWhiteSpace(txtapellido.Text) || !Regex.IsMatch(txtapellido.Text, @"^[a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("Por favor ingrese un apellido válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar formato de correo electrónico
+            if (!FormatoCorreo(correo))
+            {
+                MessageBox.Show("Por favor ingrese un correo electrónico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar formato de teléfono
+            if (txttelefono.Text.Length > 15 || !Regex.IsMatch(txttelefono.Text, @"^\d{1,15}$"))
+            {
+                MessageBox.Show("Por favor ingrese un número de teléfono válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar dirección
+            if (string.IsNullOrWhiteSpace(txtdireccion.Text))
+            {
+                MessageBox.Show("Por favor ingrese una dirección válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar ciudad
+            if (string.IsNullOrWhiteSpace(txtciudad.Text) || !Regex.IsMatch(txtciudad.Text, @"^[a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("Por favor ingrese una ciudad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar país
+            if (cmbpais.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor seleccione un país.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar grupo
+            if (cmbgrupo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor seleccione un grupo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar organización
+            if (cmborg.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor seleccione un grupo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar fecha de nacimiento (requiere al menos 18 años)
+            int edadMinima = 18;
+            if (!ValidarFechaNacimiento(dtpfecha.Value, edadMinima))
+            {
+                MessageBox.Show($"El contacto debe tener al menos {edadMinima} años para registrarse.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -86,6 +158,28 @@ namespace Proyecto_de_catedra
             }
         }
 
+        // Método para validar el formato del correo electrónico
+        private bool FormatoCorreo(string correo)
+        {
+            // Expresión regular para validar el formato de correo electrónico
+            string patronCorreo = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            // Se verifica si el correo coincide con el patrón de expresión regular
+            return Regex.IsMatch(correo, patronCorreo);
+        }
+        // Método para validar fecha de nacimiento (menor 18 años)
+        private bool ValidarFechaNacimiento(DateTime fechaNacimiento, int edadMinima)
+        {
+            // Calcular la edad actual restando la fecha de nacimiento de la fecha actual
+            int edad = DateTime.Today.Year - fechaNacimiento.Year;
+
+            // Restar un año si aún no ha pasado el cumpleaños en este año
+            if (fechaNacimiento > DateTime.Today.AddYears(-edad))
+                edad--;
+
+            // Verificar si la edad es igual o mayor que la edad mínima requerida
+            return edad >= edadMinima;
+        }
         private int ObtenerIdUsuarioActual()
         {
             int idUsuario = -1; // Valor predeterminado
@@ -120,7 +214,7 @@ namespace Proyecto_de_catedra
             txtcorreo.Clear();
             txttelefono.Clear();
             txtdireccion.Clear();
-            txtcuidad.Clear();
+            txtciudad.Clear();
             cmbpais.SelectedIndex = -1; // Limpiar selección del ComboBox de países
             dtpfecha.Value = DateTime.Today; // Restablecer fecha de nacimiento al día actual
             cmbgrupo.SelectedIndex = -1;
@@ -132,8 +226,6 @@ namespace Proyecto_de_catedra
         }
         private void Agregar_Load(object sender, EventArgs e)
         {
-            // Quita el borde del control DateTimePicker
-            dtpfecha.BorderStyle = BorderStyle.None;
         }
         private void txtdireccion_TextChanged(object sender, EventArgs e)
         {
@@ -142,6 +234,14 @@ namespace Proyecto_de_catedra
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            // Cierra el formulario actual (Agregar) y muestra el formulario de Inicio
+            this.Close();
+            // Muestra el formulario de Inicio si ya está creado
+            Application.OpenForms["Inicio"]?.Show();
         }
     }
 }
