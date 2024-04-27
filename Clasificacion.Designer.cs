@@ -40,9 +40,9 @@
             // 
             pictureBox2.BackColor = Color.White;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(29, 108);
+            pictureBox2.Location = new Point(29, 51);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(703, 434);
+            pictureBox2.Size = new Size(703, 475);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 36;
             pictureBox2.TabStop = false;
@@ -65,7 +65,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(227, 49);
+            label1.Location = new Point(226, 51);
             label1.Name = "label1";
             label1.Size = new Size(324, 28);
             label1.TabIndex = 38;
