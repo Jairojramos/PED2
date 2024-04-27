@@ -220,6 +220,7 @@
             label1.Size = new Size(220, 28);
             label1.TabIndex = 25;
             label1.Text = "Agregar contacto";
+            label1.Click += label1_Click;
             // 
             // cmbgrupo
             // 

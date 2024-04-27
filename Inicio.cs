@@ -99,6 +99,69 @@ namespace Proyecto_de_catedra
 
             // Mostrar el formulario "Agregar" como una ventana modal
             formulario.ShowDialog();
+
+            // Una vez que se cierre el formulario, desbloquear el formulario principal
+            this.Enabled = true;
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario Lista
+            Lista formularioLista = new Lista();
+
+            // Bloquear el formulario principal
+            this.Enabled = false;
+
+            // Mostrar el formulario Lista como una ventana modal
+            formularioLista.ShowDialog();
+
+            // Una vez que se cierre el formulario, desbloquear el formulario principal
+            this.Enabled = true;
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario Busqueda
+            Busqueda formularioBusqueda = new Busqueda();
+
+            // Bloquear el formulario principal
+            this.Enabled = false;
+
+            // Mostrar el formulario Busqueda como una ventana no modal
+            formularioBusqueda.Show();
+
+            // Una vez que se cierre el formulario, desbloquear el formulario principal
+            this.Enabled = true;
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario Configuracion
+            Configuracion formularioConfiguracion = new Configuracion();
+
+            // Bloquear el formulario principal
+            this.Enabled = false;
+
+            // Mostrar el formulario Configuracion como una ventana modal
+            formularioConfiguracion.ShowDialog();
+
+            // Una vez que se cierre el formulario, desbloquear el formulario principal
+            this.Enabled = true;
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario Configuracion
+            Clasificacion formularioClasificacion = new Clasificacion();
+
+            // Bloquear el formulario principal
+            this.Enabled = false;
+
+            // Mostrar el formulario Configuracion como una ventana modal
+            formularioClasificacion.ShowDialog();
+
+            // Una vez que se cierre el formulario, desbloquear el formulario principal
+            this.Enabled = true;
         }
     }
 }

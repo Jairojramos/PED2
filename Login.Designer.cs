@@ -132,6 +132,7 @@ namespace Proyecto_de_catedra
             button2.Text = "¿Olvidaste la contraseña?";
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // btnRegistrarse
             // 
@@ -182,7 +183,7 @@ namespace Proyecto_de_catedra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(793, 547);
+            ClientSize = new Size(792, 547);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(button2);

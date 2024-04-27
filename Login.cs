@@ -15,7 +15,7 @@ namespace Proyecto_de_catedra
     {
         // Cadena de conexión a la base de datos
         private string cadenaConexion = "Server=DESKTOP-C340CT0;Database=Contactos;integrated security=True;";
-        
+
         // Propiedad pública para el nombre de usuario
         public string NombreUsuario { get; private set; }
         public Login()
@@ -93,15 +93,36 @@ namespace Proyecto_de_catedra
 
         private void btnRegistrarse_Click_1(object sender, EventArgs e)
         {
+            // Desactivar el formulario principal para dar un efecto de desenfoque
+            this.Enabled = false;
+
             // Aquí abrimos el formulario de registro
             Registro Registro = new Registro();
-            Registro.Show();
+            Registro.ShowDialog();
+
+            // Una vez que se cierre el formulario, desbloquear el formulario principal
+            this.Enabled = true;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             // Cambiar el carácter de contraseña a texto o viceversa
             txtpass.PasswordChar = txtpass.PasswordChar == '\0' ? '*' : '\0';
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Desactivar el formulario principal para dar un efecto de desenfoque
+            this.Enabled = false;
+
+            // Crear una instancia del formulario Recuperar
+            Recuperar formularioRecuperar = new Recuperar();
+
+            // Mostrar el formulario Recuperar como una ventana modal
+            formularioRecuperar.ShowDialog();
+
+            // Una vez que se cierre el formulario, desbloquear el formulario principal
+            this.Enabled = true;
         }
     }
 }

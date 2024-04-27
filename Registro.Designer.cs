@@ -90,7 +90,7 @@
             txtpass.BorderStyle = BorderStyle.None;
             txtpass.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtpass.ForeColor = Color.DimGray;
-            txtpass.Location = new Point(480, 283);
+            txtpass.Location = new Point(481, 283);
             txtpass.Name = "txtpass";
             txtpass.PasswordChar = '*';
             txtpass.Size = new Size(265, 19);
@@ -136,7 +136,7 @@
             txtcorreo.BorderStyle = BorderStyle.None;
             txtcorreo.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtcorreo.ForeColor = Color.DimGray;
-            txtcorreo.Location = new Point(476, 226);
+            txtcorreo.Location = new Point(477, 225);
             txtcorreo.Name = "txtcorreo";
             txtcorreo.Size = new Size(265, 19);
             txtcorreo.TabIndex = 20;
@@ -146,7 +146,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(830, 547);
+            ClientSize = new Size(834, 547);
             Controls.Add(txtcorreo);
             Controls.Add(pictureBox2);
             Controls.Add(btnRegresar);

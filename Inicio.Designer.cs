@@ -131,6 +131,7 @@
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 34;
             pictureBox8.TabStop = false;
+            pictureBox8.Click += pictureBox8_Click;
             // 
             // label2
             // 
@@ -150,7 +151,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(105, 120, 147);
-            label1.Location = new Point(315, 263);
+            label1.Location = new Point(313, 267);
             label1.Name = "label1";
             label1.Size = new Size(167, 18);
             label1.TabIndex = 36;
@@ -167,6 +168,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 37;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click_1;
             // 
             // label3
             // 
@@ -174,7 +176,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(105, 120, 147);
-            label3.Location = new Point(345, 418);
+            label3.Location = new Point(341, 436);
             label3.Name = "label3";
             label3.Size = new Size(105, 18);
             label3.TabIndex = 38;
@@ -191,6 +193,7 @@
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 39;
             pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
             // 
             // label4
             // 
@@ -198,7 +201,7 @@
             label4.BackColor = Color.White;
             label4.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(105, 120, 147);
-            label4.Location = new Point(557, 418);
+            label4.Location = new Point(560, 436);
             label4.Name = "label4";
             label4.Size = new Size(114, 18);
             label4.TabIndex = 40;
@@ -215,6 +218,7 @@
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 41;
             pictureBox10.TabStop = false;
+            pictureBox10.Click += pictureBox10_Click;
             // 
             // label5
             // 
@@ -222,7 +226,7 @@
             label5.BackColor = Color.White;
             label5.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(105, 120, 147);
-            label5.Location = new Point(544, 263);
+            label5.Location = new Point(543, 267);
             label5.Name = "label5";
             label5.Size = new Size(145, 18);
             label5.TabIndex = 42;
@@ -233,7 +237,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(768, 492);
+            ClientSize = new Size(768, 508);
             Controls.Add(label5);
             Controls.Add(pictureBox10);
             Controls.Add(label4);
