@@ -69,10 +69,10 @@
             // 
             btnCerrar.BackColor = Color.White;
             btnCerrar.Cursor = Cursors.Hand;
-            btnCerrar.FlatAppearance.BorderColor = SystemColors.ButtonFace;
+            btnCerrar.FlatAppearance.BorderColor = Color.White;
             btnCerrar.FlatAppearance.BorderSize = 0;
-            btnCerrar.FlatAppearance.MouseDownBackColor = SystemColors.ButtonFace;
-            btnCerrar.FlatAppearance.MouseOverBackColor = SystemColors.ButtonFace;
+            btnCerrar.FlatAppearance.MouseDownBackColor = Color.White;
+            btnCerrar.FlatAppearance.MouseOverBackColor = Color.White;
             btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCerrar.ForeColor = Color.Red;

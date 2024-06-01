@@ -2920,7 +2920,7 @@
   <metadata name="organizacion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnbuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAq0AAAFsCAYAAADmAIAnAAAABGdBTUEAALGPC/xhBQAAOg9JREFUeF7t
         3Qd8Hed15317LStx3O0kXjtlneY3xdlsvOuNLZEEQKIDbCIlUbIlUrLVYssliXdtiwRw+wVIU5JfO5ad

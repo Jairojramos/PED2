@@ -35,7 +35,11 @@
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
             label1 = new Label();
-            dgv = new DataGridView();
+            dgvcontactos = new DataGridView();
+            btneditar = new Button();
+            btneliminar = new Button();
+            btnbuscar = new PictureBox();
+            txtbuscar = new TextBox();
             nombre = new DataGridViewTextBoxColumn();
             apellido = new DataGridViewTextBoxColumn();
             correo = new DataGridViewTextBoxColumn();
@@ -46,13 +50,10 @@
             telefono = new DataGridViewTextBoxColumn();
             grupo = new DataGridViewTextBoxColumn();
             organizacion = new DataGridViewTextBoxColumn();
-            btneditar = new Button();
-            btneliminar = new Button();
-            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvcontactos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnbuscar).BeginInit();
             SuspendLayout();
             // 
             // pictureBox2
@@ -90,12 +91,12 @@
             label1.TabIndex = 32;
             label1.Text = "Lista de contactos";
             // 
-            // dgv
+            // dgvcontactos
             // 
-            dgv.BackgroundColor = Color.White;
-            dgv.BorderStyle = BorderStyle.None;
-            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvcontactos.BackgroundColor = Color.White;
+            dgvcontactos.BorderStyle = BorderStyle.None;
+            dgvcontactos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvcontactos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -103,9 +104,9 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Columns.AddRange(new DataGridViewColumn[] { nombre, apellido, correo, direccion, cuidad, pais, fechanacimiento, telefono, grupo, organizacion });
+            dgvcontactos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvcontactos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvcontactos.Columns.AddRange(new DataGridViewColumn[] { nombre, apellido, correo, direccion, cuidad, pais, fechanacimiento, telefono, grupo, organizacion });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -113,12 +114,12 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgv.DefaultCellStyle = dataGridViewCellStyle2;
-            dgv.EnableHeadersVisualStyles = false;
-            dgv.GridColor = Color.Gainsboro;
-            dgv.Location = new Point(383, 136);
-            dgv.Name = "dgv";
-            dgv.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvcontactos.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvcontactos.EnableHeadersVisualStyles = false;
+            dgvcontactos.GridColor = Color.Gainsboro;
+            dgvcontactos.Location = new Point(383, 137);
+            dgvcontactos.Name = "dgvcontactos";
+            dgvcontactos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -126,90 +127,10 @@
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dgv.RowHeadersVisible = false;
-            dgv.Size = new Size(706, 386);
-            dgv.TabIndex = 34;
-            // 
-            // nombre
-            // 
-            nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            nombre.HeaderText = "Nombre";
-            nombre.MaxInputLength = 200;
-            nombre.Name = "nombre";
-            nombre.Width = 82;
-            // 
-            // apellido
-            // 
-            apellido.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            apellido.HeaderText = "Apellido";
-            apellido.MaxInputLength = 200;
-            apellido.Name = "apellido";
-            apellido.Width = 86;
-            // 
-            // correo
-            // 
-            correo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            correo.HeaderText = "Correo";
-            correo.MaxInputLength = 200;
-            correo.Name = "correo";
-            correo.Width = 74;
-            // 
-            // direccion
-            // 
-            direccion.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            direccion.HeaderText = "Dirección";
-            direccion.MaxInputLength = 200;
-            direccion.Name = "direccion";
-            direccion.Width = 92;
-            // 
-            // cuidad
-            // 
-            cuidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            cuidad.HeaderText = "Cuidad";
-            cuidad.MaxInputLength = 200;
-            cuidad.Name = "cuidad";
-            cuidad.Width = 79;
-            // 
-            // pais
-            // 
-            pais.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            pais.HeaderText = "País";
-            pais.MaxInputLength = 200;
-            pais.Name = "pais";
-            pais.Width = 55;
-            // 
-            // fechanacimiento
-            // 
-            fechanacimiento.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            fechanacimiento.HeaderText = "Fecha de nacimiento";
-            fechanacimiento.MaxInputLength = 200;
-            fechanacimiento.Name = "fechanacimiento";
-            fechanacimiento.Width = 152;
-            // 
-            // telefono
-            // 
-            telefono.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            telefono.HeaderText = "Teléfono";
-            telefono.MaxInputLength = 200;
-            telefono.Name = "telefono";
-            telefono.Width = 84;
-            // 
-            // grupo
-            // 
-            grupo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            grupo.HeaderText = "Grupo";
-            grupo.MaxInputLength = 200;
-            grupo.Name = "grupo";
-            grupo.Width = 71;
-            // 
-            // organizacion
-            // 
-            organizacion.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            organizacion.HeaderText = "Organización";
-            organizacion.MaxInputLength = 200;
-            organizacion.Name = "organizacion";
-            organizacion.Width = 119;
+            dgvcontactos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvcontactos.RowHeadersVisible = false;
+            dgvcontactos.Size = new Size(706, 386);
+            dgvcontactos.TabIndex = 34;
             // 
             // btneditar
             // 
@@ -250,17 +171,118 @@
             btneliminar.Text = "Eliminar";
             btneliminar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnbuscar
             // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(759, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(408, 164);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 37;
-            pictureBox1.TabStop = false;
+            btnbuscar.BackColor = Color.White;
+            btnbuscar.Cursor = Cursors.Hand;
+            btnbuscar.Image = (Image)resources.GetObject("btnbuscar.Image");
+            btnbuscar.Location = new Point(759, 12);
+            btnbuscar.Name = "btnbuscar";
+            btnbuscar.Size = new Size(408, 164);
+            btnbuscar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnbuscar.TabIndex = 37;
+            btnbuscar.TabStop = false;
+            // 
+            // txtbuscar
+            // 
+            txtbuscar.BackColor = Color.White;
+            txtbuscar.BorderStyle = BorderStyle.None;
+            txtbuscar.Font = new Font("Century Gothic", 9.75F);
+            txtbuscar.ForeColor = Color.Black;
+            txtbuscar.Location = new Point(844, 87);
+            txtbuscar.Name = "txtbuscar";
+            txtbuscar.Size = new Size(201, 16);
+            txtbuscar.TabIndex = 38;
+            // 
+            // nombre
+            // 
+            nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            nombre.DataPropertyName = "nombre";
+            nombre.HeaderText = "Nombre";
+            nombre.MaxInputLength = 200;
+            nombre.Name = "nombre";
+            nombre.Width = 82;
+            // 
+            // apellido
+            // 
+            apellido.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            apellido.DataPropertyName = "apellido";
+            apellido.HeaderText = "Apellido";
+            apellido.MaxInputLength = 200;
+            apellido.Name = "apellido";
+            apellido.Width = 86;
+            // 
+            // correo
+            // 
+            correo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            correo.DataPropertyName = "correo";
+            correo.HeaderText = "Correo";
+            correo.MaxInputLength = 200;
+            correo.Name = "correo";
+            correo.Width = 74;
+            // 
+            // direccion
+            // 
+            direccion.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            direccion.DataPropertyName = "direccion";
+            direccion.HeaderText = "Dirección";
+            direccion.MaxInputLength = 200;
+            direccion.Name = "direccion";
+            direccion.Width = 92;
+            // 
+            // cuidad
+            // 
+            cuidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            cuidad.DataPropertyName = "cuidad";
+            cuidad.HeaderText = "Cuidad";
+            cuidad.MaxInputLength = 200;
+            cuidad.Name = "cuidad";
+            cuidad.Width = 79;
+            // 
+            // pais
+            // 
+            pais.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            pais.DataPropertyName = "pais";
+            pais.HeaderText = "País";
+            pais.MaxInputLength = 200;
+            pais.Name = "pais";
+            pais.Width = 55;
+            // 
+            // fechanacimiento
+            // 
+            fechanacimiento.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            fechanacimiento.DataPropertyName = "fecha_nacimiento";
+            fechanacimiento.HeaderText = "Fecha de nacimiento";
+            fechanacimiento.MaxInputLength = 200;
+            fechanacimiento.Name = "fechanacimiento";
+            fechanacimiento.Width = 152;
+            // 
+            // telefono
+            // 
+            telefono.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            telefono.DataPropertyName = "telefono";
+            telefono.HeaderText = "Teléfono";
+            telefono.MaxInputLength = 200;
+            telefono.Name = "telefono";
+            telefono.Width = 84;
+            // 
+            // grupo
+            // 
+            grupo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            grupo.DataPropertyName = "id_grupo";
+            grupo.HeaderText = "Grupo";
+            grupo.MaxInputLength = 200;
+            grupo.Name = "grupo";
+            grupo.Width = 71;
+            // 
+            // organizacion
+            // 
+            organizacion.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            organizacion.DataPropertyName = "id_organizacion";
+            organizacion.HeaderText = "Organización";
+            organizacion.MaxInputLength = 200;
+            organizacion.Name = "organizacion";
+            organizacion.Width = 119;
             // 
             // Lista
             // 
@@ -268,19 +290,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1119, 638);
+            Controls.Add(txtbuscar);
             Controls.Add(btneliminar);
             Controls.Add(btneditar);
-            Controls.Add(dgv);
+            Controls.Add(dgvcontactos);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox4);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
+            Controls.Add(btnbuscar);
             Name = "Lista";
             Text = "Lista";
+            Load += Lista_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvcontactos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnbuscar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -290,10 +314,11 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
         private Label label1;
-        private DataGridView dgv;
+        private DataGridView dgvcontactos;
         private Button btneditar;
         private Button btneliminar;
-        private PictureBox pictureBox1;
+        private PictureBox btnbuscar;
+        private TextBox txtbuscar;
         private DataGridViewTextBoxColumn nombre;
         private DataGridViewTextBoxColumn apellido;
         private DataGridViewTextBoxColumn correo;

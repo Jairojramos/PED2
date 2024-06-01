@@ -103,6 +103,7 @@
             btneliminar.TabIndex = 38;
             btneliminar.Text = "Eliminar cuenta";
             btneliminar.UseVisualStyleBackColor = false;
+            btneliminar.Click += btneliminar_Click_1;
             // 
             // btneditar
             // 
@@ -122,6 +123,7 @@
             btneditar.TabIndex = 37;
             btneditar.Text = "Guardar";
             btneditar.UseVisualStyleBackColor = false;
+            btneditar.Click += btneditar_Click;
             // 
             // pictureBox1
             // 
@@ -146,6 +148,7 @@
             txtcorreo.Size = new Size(218, 19);
             txtcorreo.TabIndex = 43;
             txtcorreo.Text = "Correo";
+            txtcorreo.TextChanged += txtcorreo_TextChanged;
             // 
             // pictureBox3
             // 
@@ -171,6 +174,7 @@
             txtpass.Size = new Size(218, 19);
             txtpass.TabIndex = 41;
             txtpass.Text = "*****";
+            txtpass.TextChanged += txtpass_TextChanged;
             // 
             // txtuser
             // 
@@ -183,6 +187,7 @@
             txtuser.Size = new Size(218, 19);
             txtuser.TabIndex = 40;
             txtuser.Text = "Usuario";
+            txtuser.TextChanged += txtuser_TextChanged;
             // 
             // pictureBox5
             // 

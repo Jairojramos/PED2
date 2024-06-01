@@ -33,34 +33,34 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busqueda));
             btnbuscar = new Button();
-            organizacion = new DataGridViewTextBoxColumn();
-            grupo = new DataGridViewTextBoxColumn();
-            telefono = new DataGridViewTextBoxColumn();
-            fechanacimiento = new DataGridViewTextBoxColumn();
-            pais = new DataGridViewTextBoxColumn();
-            cuidad = new DataGridViewTextBoxColumn();
-            correo = new DataGridViewTextBoxColumn();
-            apellido = new DataGridViewTextBoxColumn();
+            dgvbuscar = new DataGridView();
             nombre = new DataGridViewTextBoxColumn();
-            dgv = new DataGridView();
+            apellido = new DataGridViewTextBoxColumn();
+            correo = new DataGridViewTextBoxColumn();
             direccion = new DataGridViewTextBoxColumn();
+            cuidad = new DataGridViewTextBoxColumn();
+            pais = new DataGridViewTextBoxColumn();
+            fechanacimiento = new DataGridViewTextBoxColumn();
+            telefono = new DataGridViewTextBoxColumn();
+            grupo = new DataGridViewTextBoxColumn();
+            organizacion = new DataGridViewTextBoxColumn();
             pictureBox4 = new PictureBox();
             label1 = new Label();
             pictureBox2 = new PictureBox();
-            cmbpais = new ComboBox();
+            cmbgrupo = new ComboBox();
             pictureBox3 = new PictureBox();
-            comboBox1 = new ComboBox();
+            cmborg = new ComboBox();
             pictureBox5 = new PictureBox();
             label11 = new Label();
             label10 = new Label();
             label2 = new Label();
             label3 = new Label();
-            comboBox2 = new ComboBox();
+            cmbpais = new ComboBox();
             pictureBox1 = new PictureBox();
-            comboBox3 = new ComboBox();
+            cmbciudad = new ComboBox();
             pictureBox6 = new PictureBox();
             treeView1 = new TreeView();
-            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvbuscar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -87,85 +87,14 @@
             btnbuscar.TabIndex = 42;
             btnbuscar.Text = "Buscar";
             btnbuscar.UseVisualStyleBackColor = false;
+            btnbuscar.Click += btnbuscar_Click_1;
             // 
-            // organizacion
+            // dgvbuscar
             // 
-            organizacion.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            organizacion.HeaderText = "Organización";
-            organizacion.MaxInputLength = 200;
-            organizacion.Name = "organizacion";
-            organizacion.Width = 119;
-            // 
-            // grupo
-            // 
-            grupo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            grupo.HeaderText = "Grupo";
-            grupo.MaxInputLength = 200;
-            grupo.Name = "grupo";
-            grupo.Width = 71;
-            // 
-            // telefono
-            // 
-            telefono.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            telefono.HeaderText = "Teléfono";
-            telefono.MaxInputLength = 200;
-            telefono.Name = "telefono";
-            telefono.Width = 84;
-            // 
-            // fechanacimiento
-            // 
-            fechanacimiento.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            fechanacimiento.HeaderText = "Fecha de nacimiento";
-            fechanacimiento.MaxInputLength = 200;
-            fechanacimiento.Name = "fechanacimiento";
-            fechanacimiento.Width = 152;
-            // 
-            // pais
-            // 
-            pais.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            pais.HeaderText = "País";
-            pais.MaxInputLength = 200;
-            pais.Name = "pais";
-            pais.Width = 55;
-            // 
-            // cuidad
-            // 
-            cuidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            cuidad.HeaderText = "Cuidad";
-            cuidad.MaxInputLength = 200;
-            cuidad.Name = "cuidad";
-            cuidad.Width = 79;
-            // 
-            // correo
-            // 
-            correo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            correo.HeaderText = "Correo";
-            correo.MaxInputLength = 200;
-            correo.Name = "correo";
-            correo.Width = 74;
-            // 
-            // apellido
-            // 
-            apellido.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            apellido.HeaderText = "Apellido";
-            apellido.MaxInputLength = 200;
-            apellido.Name = "apellido";
-            apellido.Width = 86;
-            // 
-            // nombre
-            // 
-            nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            nombre.HeaderText = "Nombre";
-            nombre.MaxInputLength = 200;
-            nombre.Name = "nombre";
-            nombre.Width = 82;
-            // 
-            // dgv
-            // 
-            dgv.BackgroundColor = Color.White;
-            dgv.BorderStyle = BorderStyle.None;
-            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvbuscar.BackgroundColor = Color.White;
+            dgvbuscar.BorderStyle = BorderStyle.None;
+            dgvbuscar.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvbuscar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -173,9 +102,9 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Columns.AddRange(new DataGridViewColumn[] { nombre, apellido, correo, direccion, cuidad, pais, fechanacimiento, telefono, grupo, organizacion });
+            dgvbuscar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvbuscar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvbuscar.Columns.AddRange(new DataGridViewColumn[] { nombre, apellido, correo, direccion, cuidad, pais, fechanacimiento, telefono, grupo, organizacion });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -183,12 +112,12 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgv.DefaultCellStyle = dataGridViewCellStyle2;
-            dgv.EnableHeadersVisualStyles = false;
-            dgv.GridColor = Color.Gainsboro;
-            dgv.Location = new Point(27, 187);
-            dgv.Name = "dgv";
-            dgv.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvbuscar.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvbuscar.EnableHeadersVisualStyles = false;
+            dgvbuscar.GridColor = Color.Gainsboro;
+            dgvbuscar.Location = new Point(27, 187);
+            dgvbuscar.Name = "dgvbuscar";
+            dgvbuscar.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -196,18 +125,100 @@
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dgv.RowHeadersVisible = false;
-            dgv.Size = new Size(687, 386);
-            dgv.TabIndex = 41;
+            dgvbuscar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvbuscar.RowHeadersVisible = false;
+            dgvbuscar.Size = new Size(687, 386);
+            dgvbuscar.TabIndex = 41;
+            // 
+            // nombre
+            // 
+            nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            nombre.DataPropertyName = "nombre";
+            nombre.HeaderText = "Nombre";
+            nombre.MaxInputLength = 200;
+            nombre.Name = "nombre";
+            nombre.Width = 82;
+            // 
+            // apellido
+            // 
+            apellido.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            apellido.DataPropertyName = "apellido";
+            apellido.HeaderText = "Apellido";
+            apellido.MaxInputLength = 200;
+            apellido.Name = "apellido";
+            apellido.Width = 86;
+            // 
+            // correo
+            // 
+            correo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            correo.DataPropertyName = "correo";
+            correo.HeaderText = "Correo";
+            correo.MaxInputLength = 200;
+            correo.Name = "correo";
+            correo.Width = 74;
             // 
             // direccion
             // 
             direccion.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            direccion.DataPropertyName = "direccion";
             direccion.HeaderText = "Dirección";
             direccion.MaxInputLength = 200;
             direccion.Name = "direccion";
             direccion.Width = 92;
+            // 
+            // cuidad
+            // 
+            cuidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            cuidad.DataPropertyName = "ciudad";
+            cuidad.HeaderText = "Cuidad";
+            cuidad.MaxInputLength = 200;
+            cuidad.Name = "cuidad";
+            cuidad.Width = 79;
+            // 
+            // pais
+            // 
+            pais.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            pais.DataPropertyName = "pais";
+            pais.HeaderText = "País";
+            pais.MaxInputLength = 200;
+            pais.Name = "pais";
+            pais.Width = 55;
+            // 
+            // fechanacimiento
+            // 
+            fechanacimiento.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            fechanacimiento.DataPropertyName = "fecha_nacimiento";
+            fechanacimiento.HeaderText = "Fecha de nacimiento";
+            fechanacimiento.MaxInputLength = 200;
+            fechanacimiento.Name = "fechanacimiento";
+            fechanacimiento.Width = 152;
+            // 
+            // telefono
+            // 
+            telefono.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            telefono.DataPropertyName = "telefono";
+            telefono.HeaderText = "Teléfono";
+            telefono.MaxInputLength = 200;
+            telefono.Name = "telefono";
+            telefono.Width = 84;
+            // 
+            // grupo
+            // 
+            grupo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            grupo.DataPropertyName = "grupo";
+            grupo.HeaderText = "Grupo";
+            grupo.MaxInputLength = 200;
+            grupo.Name = "grupo";
+            grupo.Width = 71;
+            // 
+            // organizacion
+            // 
+            organizacion.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            organizacion.DataPropertyName = "organizacion";
+            organizacion.HeaderText = "Organización";
+            organizacion.MaxInputLength = 200;
+            organizacion.Name = "organizacion";
+            organizacion.Width = 119;
             // 
             // pictureBox4
             // 
@@ -243,19 +254,20 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 54;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
-            // cmbpais
+            // cmbgrupo
             // 
-            cmbpais.BackColor = Color.White;
-            cmbpais.FlatStyle = FlatStyle.Flat;
-            cmbpais.Font = new Font("Century Gothic", 9.75F);
-            cmbpais.ForeColor = Color.Black;
-            cmbpais.FormattingEnabled = true;
-            cmbpais.Items.AddRange(new object[] { "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Argentina", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia del Norte", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República del Congo", "República Democrática del Congo", "República Dominicana", "Ruanda", "Rumania", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudáfrica", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zimbabue" });
-            cmbpais.Location = new Point(382, 131);
-            cmbpais.Name = "cmbpais";
-            cmbpais.Size = new Size(86, 25);
-            cmbpais.TabIndex = 56;
+            cmbgrupo.BackColor = Color.White;
+            cmbgrupo.FlatStyle = FlatStyle.Flat;
+            cmbgrupo.Font = new Font("Century Gothic", 9.75F);
+            cmbgrupo.ForeColor = Color.Black;
+            cmbgrupo.FormattingEnabled = true;
+            cmbgrupo.Items.AddRange(new object[] { "Amigo", "Familia", "Trabajo", "Clientes", "Proveedores" });
+            cmbgrupo.Location = new Point(371, 131);
+            cmbgrupo.Name = "cmbgrupo";
+            cmbgrupo.Size = new Size(97, 25);
+            cmbgrupo.TabIndex = 56;
             // 
             // pictureBox3
             // 
@@ -269,18 +281,18 @@
             pictureBox3.TabIndex = 57;
             pictureBox3.TabStop = false;
             // 
-            // comboBox1
+            // cmborg
             // 
-            comboBox1.BackColor = Color.White;
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Century Gothic", 9.75F);
-            comboBox1.ForeColor = Color.Black;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Argentina", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia del Norte", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República del Congo", "República Democrática del Congo", "República Dominicana", "Ruanda", "Rumania", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudáfrica", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zimbabue" });
-            comboBox1.Location = new Point(516, 131);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(86, 25);
-            comboBox1.TabIndex = 58;
+            cmborg.BackColor = Color.White;
+            cmborg.FlatStyle = FlatStyle.Flat;
+            cmborg.Font = new Font("Century Gothic", 9.75F);
+            cmborg.ForeColor = Color.Black;
+            cmborg.FormattingEnabled = true;
+            cmborg.Items.AddRange(new object[] { "Empresa", "Institución educativa", "Organización sin fines de lucro", "Gobierno", "ONG", "Startup", "Asociación", "Agencia gubernamental", "Consultoría", "Fundación", "Educación", "Salud", "Tecnología", "Medios", "Finanzas", "Entretenimiento", "Agricultura", "Transporte" });
+            cmborg.Location = new Point(493, 131);
+            cmborg.Name = "cmborg";
+            cmborg.Size = new Size(109, 25);
+            cmborg.TabIndex = 58;
             // 
             // pictureBox5
             // 
@@ -300,7 +312,7 @@
             label11.BackColor = Color.White;
             label11.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label11.ForeColor = Color.FromArgb(105, 120, 147);
-            label11.Location = new Point(506, 101);
+            label11.Location = new Point(493, 101);
             label11.Name = "label11";
             label11.Size = new Size(96, 16);
             label11.TabIndex = 61;
@@ -312,7 +324,7 @@
             label10.BackColor = Color.White;
             label10.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label10.ForeColor = Color.FromArgb(105, 120, 147);
-            label10.Location = new Point(396, 101);
+            label10.Location = new Point(390, 101);
             label10.Name = "label10";
             label10.Size = new Size(48, 16);
             label10.TabIndex = 60;
@@ -324,7 +336,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(105, 120, 147);
-            label2.Location = new Point(270, 101);
+            label2.Location = new Point(264, 101);
             label2.Name = "label2";
             label2.Size = new Size(32, 16);
             label2.TabIndex = 67;
@@ -336,24 +348,24 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(105, 120, 147);
-            label3.Location = new Point(126, 101);
+            label3.Location = new Point(118, 101);
             label3.Name = "label3";
             label3.Size = new Size(56, 16);
             label3.TabIndex = 66;
             label3.Text = "Cuidad";
             // 
-            // comboBox2
+            // cmbpais
             // 
-            comboBox2.BackColor = Color.White;
-            comboBox2.FlatStyle = FlatStyle.Flat;
-            comboBox2.Font = new Font("Century Gothic", 9.75F);
-            comboBox2.ForeColor = Color.Black;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Argentina", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia del Norte", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República del Congo", "República Democrática del Congo", "República Dominicana", "Ruanda", "Rumania", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudáfrica", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zimbabue" });
-            comboBox2.Location = new Point(250, 131);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(86, 25);
-            comboBox2.TabIndex = 64;
+            cmbpais.BackColor = Color.White;
+            cmbpais.FlatStyle = FlatStyle.Flat;
+            cmbpais.Font = new Font("Century Gothic", 9.75F);
+            cmbpais.ForeColor = Color.Black;
+            cmbpais.FormattingEnabled = true;
+            cmbpais.Items.AddRange(new object[] { "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Argentina", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia del Norte", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República del Congo", "República Democrática del Congo", "República Dominicana", "Ruanda", "Rumania", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudáfrica", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zimbabue" });
+            cmbpais.Location = new Point(230, 131);
+            cmbpais.Name = "cmbpais";
+            cmbpais.Size = new Size(106, 25);
+            cmbpais.TabIndex = 64;
             // 
             // pictureBox1
             // 
@@ -366,19 +378,19 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 65;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // comboBox3
+            // cmbciudad
             // 
-            comboBox3.BackColor = Color.White;
-            comboBox3.FlatStyle = FlatStyle.Flat;
-            comboBox3.Font = new Font("Century Gothic", 9.75F);
-            comboBox3.ForeColor = Color.Black;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Afganistán", "Albania", "Alemania", "Andorra", "Angola", "Antigua y Barbuda", "Arabia Saudita", "Argelia", "Argentina", "Armenia", "Australia", "Austria", "Azerbaiyán", "Bahamas", "Bangladés", "Barbados", "Baréin", "Bélgica", "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia del Norte", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República del Congo", "República Democrática del Congo", "República Dominicana", "Ruanda", "Rumania", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudáfrica", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zimbabue" });
-            comboBox3.Location = new Point(116, 131);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(86, 25);
-            comboBox3.TabIndex = 62;
+            cmbciudad.BackColor = Color.White;
+            cmbciudad.FlatStyle = FlatStyle.Flat;
+            cmbciudad.Font = new Font("Century Gothic", 9.75F);
+            cmbciudad.ForeColor = Color.Black;
+            cmbciudad.FormattingEnabled = true;
+            cmbciudad.Location = new Point(96, 131);
+            cmbciudad.Name = "cmbciudad";
+            cmbciudad.Size = new Size(106, 25);
+            cmbciudad.TabIndex = 62;
             // 
             // pictureBox6
             // 
@@ -410,25 +422,25 @@
             Controls.Add(treeView1);
             Controls.Add(label2);
             Controls.Add(label3);
-            Controls.Add(comboBox2);
+            Controls.Add(cmbpais);
             Controls.Add(pictureBox1);
-            Controls.Add(comboBox3);
+            Controls.Add(cmbciudad);
             Controls.Add(pictureBox6);
             Controls.Add(label11);
             Controls.Add(label10);
-            Controls.Add(comboBox1);
+            Controls.Add(cmborg);
             Controls.Add(pictureBox5);
-            Controls.Add(cmbpais);
+            Controls.Add(cmbgrupo);
             Controls.Add(pictureBox2);
             Controls.Add(btnbuscar);
-            Controls.Add(dgv);
+            Controls.Add(dgvbuscar);
             Controls.Add(pictureBox4);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
             Name = "Busqueda";
             Text = "Busqueda";
             Load += Busqueda_Load;
-            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvbuscar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -442,32 +454,32 @@
         #endregion
 
         private Button btnbuscar;
-        private DataGridViewTextBoxColumn organizacion;
-        private DataGridViewTextBoxColumn grupo;
-        private DataGridViewTextBoxColumn telefono;
-        private DataGridViewTextBoxColumn fechanacimiento;
-        private DataGridViewTextBoxColumn pais;
-        private DataGridViewTextBoxColumn cuidad;
-        private DataGridViewTextBoxColumn correo;
-        private DataGridViewTextBoxColumn apellido;
-        private DataGridViewTextBoxColumn nombre;
-        private DataGridView dgv;
-        private DataGridViewTextBoxColumn direccion;
+        private DataGridView dgvbuscar;
         private PictureBox pictureBox4;
         private Label label1;
         private PictureBox pictureBox2;
-        private ComboBox cmbpais;
+        private ComboBox cmbgrupo;
         private PictureBox pictureBox3;
-        private ComboBox comboBox1;
+        private ComboBox cmborg;
         private PictureBox pictureBox5;
         private Label label11;
         private Label label10;
         private Label label2;
         private Label label3;
-        private ComboBox comboBox2;
+        private ComboBox cmbpais;
         private PictureBox pictureBox1;
-        private ComboBox comboBox3;
+        private ComboBox cmbciudad;
         private PictureBox pictureBox6;
         private TreeView treeView1;
+        private DataGridViewTextBoxColumn nombre;
+        private DataGridViewTextBoxColumn apellido;
+        private DataGridViewTextBoxColumn correo;
+        private DataGridViewTextBoxColumn direccion;
+        private DataGridViewTextBoxColumn cuidad;
+        private DataGridViewTextBoxColumn pais;
+        private DataGridViewTextBoxColumn fechanacimiento;
+        private DataGridViewTextBoxColumn telefono;
+        private DataGridViewTextBoxColumn grupo;
+        private DataGridViewTextBoxColumn organizacion;
     }
 }

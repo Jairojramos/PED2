@@ -35,4 +35,9 @@ namespace Proyecto_de_catedra
             IdUsuario = idUsuario;
         }
     }
+
+    public static class Sesion
+    {
+        public static int IdUsuario { get; set; }
+    }
 }
