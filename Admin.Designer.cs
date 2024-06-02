@@ -28,57 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            btneditar = new Button();
-            pictureBox1 = new PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             btneliminar = new Button();
             dgv = new DataGridView();
-            usuario = new DataGridViewTextBoxColumn();
-            correo = new DataGridViewTextBoxColumn();
-            contrasena = new DataGridViewTextBoxColumn();
             label1 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             btnCerrar = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
-            // 
-            // btneditar
-            // 
-            btneditar.BackColor = Color.FromArgb(57, 126, 246);
-            btneditar.Cursor = Cursors.Hand;
-            btneditar.FlatAppearance.BorderColor = Color.FromArgb(57, 126, 246);
-            btneditar.FlatAppearance.BorderSize = 0;
-            btneditar.FlatAppearance.MouseDownBackColor = Color.FromArgb(57, 126, 246);
-            btneditar.FlatAppearance.MouseOverBackColor = Color.FromArgb(57, 126, 246);
-            btneditar.FlatStyle = FlatStyle.Flat;
-            btneditar.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btneditar.ForeColor = Color.White;
-            btneditar.Location = new Point(607, 456);
-            btneditar.Margin = new Padding(0);
-            btneditar.Name = "btneditar";
-            btneditar.Size = new Size(101, 30);
-            btneditar.TabIndex = 42;
-            btneditar.Text = "Editar";
-            btneditar.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(436, 41);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(408, 164);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 44;
-            pictureBox1.TabStop = false;
             // 
             // btneliminar
             // 
@@ -98,6 +61,7 @@
             btneliminar.TabIndex = 43;
             btneliminar.Text = "Eliminar";
             btneliminar.UseVisualStyleBackColor = false;
+            btneliminar.Click += btneliminar_Click;
             // 
             // dgv
             // 
@@ -114,7 +78,6 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Columns.AddRange(new DataGridViewColumn[] { usuario, correo, contrasena });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -125,7 +88,7 @@
             dgv.DefaultCellStyle = dataGridViewCellStyle2;
             dgv.EnableHeadersVisualStyles = false;
             dgv.GridColor = Color.Gainsboro;
-            dgv.Location = new Point(384, 184);
+            dgv.Location = new Point(383, 91);
             dgv.Name = "dgv";
             dgv.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -137,29 +100,9 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgv.RowHeadersVisible = false;
-            dgv.Size = new Size(460, 284);
+            dgv.Size = new Size(484, 344);
             dgv.TabIndex = 41;
-            // 
-            // usuario
-            // 
-            usuario.HeaderText = "Usuario";
-            usuario.MaxInputLength = 200;
-            usuario.Name = "usuario";
-            usuario.Width = 125;
-            // 
-            // correo
-            // 
-            correo.HeaderText = "Correo";
-            correo.MaxInputLength = 200;
-            correo.Name = "correo";
-            correo.Width = 125;
-            // 
-            // contrasena
-            // 
-            contrasena.HeaderText = "Contraseña";
-            contrasena.MaxInputLength = 200;
-            contrasena.Name = "contrasena";
-            contrasena.Width = 125;
+            dgv.CellContentClick += dgv_CellContentClick;
             // 
             // label1
             // 
@@ -215,6 +158,7 @@
             btnCerrar.Text = "Cerrar sesión";
             btnCerrar.TextAlign = ContentAlignment.MiddleLeft;
             btnCerrar.UseVisualStyleBackColor = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // Admin
             // 
@@ -224,15 +168,13 @@
             ClientSize = new Size(895, 557);
             Controls.Add(pictureBox3);
             Controls.Add(btnCerrar);
-            Controls.Add(btneditar);
             Controls.Add(btneliminar);
             Controls.Add(dgv);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Name = "Admin";
             Text = "AdminLista";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += Admin_Load;
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -241,16 +183,10 @@
         }
 
         #endregion
-
-        private Button btneditar;
-        private PictureBox pictureBox1;
         private Button btneliminar;
         private DataGridView dgv;
         private Label label1;
         private PictureBox pictureBox2;
-        private DataGridViewTextBoxColumn usuario;
-        private DataGridViewTextBoxColumn correo;
-        private DataGridViewTextBoxColumn contrasena;
         private PictureBox pictureBox3;
         private Button btnCerrar;
     }

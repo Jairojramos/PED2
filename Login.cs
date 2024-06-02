@@ -44,13 +44,13 @@ namespace Proyecto_de_catedra
                     conexion.Open();
 
                     // Verificamos si el usuario y la contraseña coinciden en la base de datos
-                    string consultaInicioSesion = "SELECT COUNT(*) FROM Usuarios WHERE usuario = @Usuario AND password = @Password";
+                    string consultaInicioSesion = "SELECT tipo_usuario FROM Usuarios WHERE usuario = @Usuario AND password = @Password";
                     SqlCommand comandoInicioSesion = new SqlCommand(consultaInicioSesion, conexion);
                     comandoInicioSesion.Parameters.AddWithValue("@Usuario", usuario);
                     comandoInicioSesion.Parameters.AddWithValue("@Password", contraseña);
-                    int cantidadUsuarios = (int)comandoInicioSesion.ExecuteScalar();
+                    var tipoUsuario = comandoInicioSesion.ExecuteScalar();
 
-                    if (cantidadUsuarios > 0)
+                    if (tipoUsuario != null)
                     {
                         // Si el inicio de sesión es exitoso, establece el nombre de usuario
                         NombreUsuario = usuario;
@@ -59,11 +59,18 @@ namespace Proyecto_de_catedra
                         MessageBox.Show($"¡Bienvenida/o, {usuario}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
 
-                        // Se abre el formulario principal de la aplicación                      
+                        // Redirige al formulario correspondiente según el tipo de usuario
                         this.Hide(); // Ocultar el formulario de inicio de sesión
-                        Inicio formInicio = new Inicio(this, usuario); // Mostrar el formulario de inicio
-                        formInicio.ShowDialog(); // Utiliza Show() si no necesitas bloquear el formulario de inicio de sesión
-
+                        if (tipoUsuario.ToString() == "admin")
+                        {
+                            Admin adminForm = new Admin(); // Mostrar el formulario de admin
+                            adminForm.ShowDialog();
+                        }
+                        else
+                        {
+                            Inicio formInicio = new Inicio(this, usuario); // Mostrar el formulario de inicio para usuarios normales
+                            formInicio.ShowDialog();
+                        }
                     }
                     else
                     {

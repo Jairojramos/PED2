@@ -60,5 +60,10 @@ namespace Proyecto_de_catedra
             Editar Editar = new Editar();
             Editar.ShowDialog();
         }
+
+        private void dgvcontactos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

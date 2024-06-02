@@ -36,10 +36,6 @@
             pictureBox4 = new PictureBox();
             label1 = new Label();
             dgvcontactos = new DataGridView();
-            btneditar = new Button();
-            btneliminar = new Button();
-            btnbuscar = new PictureBox();
-            txtbuscar = new TextBox();
             nombre = new DataGridViewTextBoxColumn();
             apellido = new DataGridViewTextBoxColumn();
             correo = new DataGridViewTextBoxColumn();
@@ -50,6 +46,10 @@
             telefono = new DataGridViewTextBoxColumn();
             grupo = new DataGridViewTextBoxColumn();
             organizacion = new DataGridViewTextBoxColumn();
+            btneditar = new Button();
+            btneliminar = new Button();
+            btnbuscar = new PictureBox();
+            txtbuscar = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvcontactos).BeginInit();
@@ -131,68 +131,7 @@
             dgvcontactos.RowHeadersVisible = false;
             dgvcontactos.Size = new Size(706, 386);
             dgvcontactos.TabIndex = 34;
-            // 
-            // btneditar
-            // 
-            btneditar.BackColor = Color.FromArgb(57, 126, 246);
-            btneditar.Cursor = Cursors.Hand;
-            btneditar.FlatAppearance.BorderColor = Color.FromArgb(57, 126, 246);
-            btneditar.FlatAppearance.BorderSize = 0;
-            btneditar.FlatAppearance.MouseDownBackColor = Color.FromArgb(57, 126, 246);
-            btneditar.FlatAppearance.MouseOverBackColor = Color.FromArgb(57, 126, 246);
-            btneditar.FlatStyle = FlatStyle.Flat;
-            btneditar.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btneditar.ForeColor = Color.White;
-            btneditar.Location = new Point(871, 550);
-            btneditar.Margin = new Padding(0);
-            btneditar.Name = "btneditar";
-            btneditar.Size = new Size(101, 30);
-            btneditar.TabIndex = 35;
-            btneditar.Text = "Editar";
-            btneditar.UseVisualStyleBackColor = false;
-            btneditar.Click += btneditar_Click;
-            // 
-            // btneliminar
-            // 
-            btneliminar.BackColor = Color.FromArgb(245, 71, 71);
-            btneliminar.Cursor = Cursors.Hand;
-            btneliminar.FlatAppearance.BorderColor = Color.FromArgb(57, 126, 246);
-            btneliminar.FlatAppearance.BorderSize = 0;
-            btneliminar.FlatAppearance.MouseDownBackColor = Color.FromArgb(57, 126, 246);
-            btneliminar.FlatAppearance.MouseOverBackColor = Color.FromArgb(57, 126, 246);
-            btneliminar.FlatStyle = FlatStyle.Flat;
-            btneliminar.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btneliminar.ForeColor = Color.White;
-            btneliminar.Location = new Point(988, 550);
-            btneliminar.Margin = new Padding(0);
-            btneliminar.Name = "btneliminar";
-            btneliminar.Size = new Size(101, 30);
-            btneliminar.TabIndex = 36;
-            btneliminar.Text = "Eliminar";
-            btneliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnbuscar
-            // 
-            btnbuscar.BackColor = Color.White;
-            btnbuscar.Cursor = Cursors.Hand;
-            btnbuscar.Image = (Image)resources.GetObject("btnbuscar.Image");
-            btnbuscar.Location = new Point(759, 12);
-            btnbuscar.Name = "btnbuscar";
-            btnbuscar.Size = new Size(408, 164);
-            btnbuscar.SizeMode = PictureBoxSizeMode.Zoom;
-            btnbuscar.TabIndex = 37;
-            btnbuscar.TabStop = false;
-            // 
-            // txtbuscar
-            // 
-            txtbuscar.BackColor = Color.White;
-            txtbuscar.BorderStyle = BorderStyle.None;
-            txtbuscar.Font = new Font("Century Gothic", 9.75F);
-            txtbuscar.ForeColor = Color.Black;
-            txtbuscar.Location = new Point(844, 87);
-            txtbuscar.Name = "txtbuscar";
-            txtbuscar.Size = new Size(201, 16);
-            txtbuscar.TabIndex = 38;
+            dgvcontactos.CellContentClick += dgvcontactos_CellContentClick;
             // 
             // nombre
             // 
@@ -283,6 +222,68 @@
             organizacion.MaxInputLength = 200;
             organizacion.Name = "organizacion";
             organizacion.Width = 119;
+            // 
+            // btneditar
+            // 
+            btneditar.BackColor = Color.FromArgb(57, 126, 246);
+            btneditar.Cursor = Cursors.Hand;
+            btneditar.FlatAppearance.BorderColor = Color.FromArgb(57, 126, 246);
+            btneditar.FlatAppearance.BorderSize = 0;
+            btneditar.FlatAppearance.MouseDownBackColor = Color.FromArgb(57, 126, 246);
+            btneditar.FlatAppearance.MouseOverBackColor = Color.FromArgb(57, 126, 246);
+            btneditar.FlatStyle = FlatStyle.Flat;
+            btneditar.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btneditar.ForeColor = Color.White;
+            btneditar.Location = new Point(871, 550);
+            btneditar.Margin = new Padding(0);
+            btneditar.Name = "btneditar";
+            btneditar.Size = new Size(101, 30);
+            btneditar.TabIndex = 35;
+            btneditar.Text = "Editar";
+            btneditar.UseVisualStyleBackColor = false;
+            btneditar.Click += btneditar_Click;
+            // 
+            // btneliminar
+            // 
+            btneliminar.BackColor = Color.FromArgb(245, 71, 71);
+            btneliminar.Cursor = Cursors.Hand;
+            btneliminar.FlatAppearance.BorderColor = Color.FromArgb(57, 126, 246);
+            btneliminar.FlatAppearance.BorderSize = 0;
+            btneliminar.FlatAppearance.MouseDownBackColor = Color.FromArgb(57, 126, 246);
+            btneliminar.FlatAppearance.MouseOverBackColor = Color.FromArgb(57, 126, 246);
+            btneliminar.FlatStyle = FlatStyle.Flat;
+            btneliminar.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btneliminar.ForeColor = Color.White;
+            btneliminar.Location = new Point(988, 550);
+            btneliminar.Margin = new Padding(0);
+            btneliminar.Name = "btneliminar";
+            btneliminar.Size = new Size(101, 30);
+            btneliminar.TabIndex = 36;
+            btneliminar.Text = "Eliminar";
+            btneliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnbuscar
+            // 
+            btnbuscar.BackColor = Color.White;
+            btnbuscar.Cursor = Cursors.Hand;
+            btnbuscar.Image = (Image)resources.GetObject("btnbuscar.Image");
+            btnbuscar.Location = new Point(759, 12);
+            btnbuscar.Name = "btnbuscar";
+            btnbuscar.Size = new Size(408, 164);
+            btnbuscar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnbuscar.TabIndex = 37;
+            btnbuscar.TabStop = false;
+            // 
+            // txtbuscar
+            // 
+            txtbuscar.BackColor = Color.White;
+            txtbuscar.BorderStyle = BorderStyle.None;
+            txtbuscar.Font = new Font("Century Gothic", 9.75F);
+            txtbuscar.ForeColor = Color.Black;
+            txtbuscar.Location = new Point(844, 87);
+            txtbuscar.Name = "txtbuscar";
+            txtbuscar.Size = new Size(201, 16);
+            txtbuscar.TabIndex = 38;
             // 
             // Lista
             // 

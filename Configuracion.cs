@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Proyecto_de_catedra
@@ -117,6 +118,28 @@ namespace Proyecto_de_catedra
                     }
                 }
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            // Ruta del archivo PDF en tu computadora
+            string rutaPDF = @"C:\Users\jairo\Downloads\UDB\PED\Proyecto de catedra\Documentos\Manual de usuario.pdf"; // Asegúrate de que la ruta sea correcta
+
+            try
+            {
+                // Usa explorer para abrir el archivo PDF con la aplicación predeterminada
+                Process.Start("explorer.exe", rutaPDF);
+            }
+            catch (Exception ex)
+            {
+                // Maneja cualquier excepción que ocurra al intentar abrir el archivo
+                MessageBox.Show("Error al abrir el archivo PDF: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

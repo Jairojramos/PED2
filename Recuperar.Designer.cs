@@ -35,7 +35,7 @@
             txtcorreo = new TextBox();
             btnRegistrarse = new Button();
             pictureBox3 = new PictureBox();
-            textBox1 = new TextBox();
+            txtcontra = new TextBox();
             pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -82,6 +82,7 @@
             btncambiar.TabIndex = 10;
             btncambiar.Text = "Cambiar contraseña";
             btncambiar.UseVisualStyleBackColor = false;
+            btncambiar.Click += btncambiar_Click;
             // 
             // txtcorreo
             // 
@@ -94,6 +95,7 @@
             txtcorreo.Size = new Size(201, 19);
             txtcorreo.TabIndex = 11;
             txtcorreo.Text = "Correo";
+            txtcorreo.TextChanged += txtcorreo_TextChanged;
             // 
             // btnRegistrarse
             // 
@@ -127,18 +129,19 @@
             pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // txtcontra
             // 
-            textBox1.BackColor = Color.FromArgb(76, 147, 237);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Enabled = false;
-            textBox1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(493, 288);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(201, 19);
-            textBox1.TabIndex = 18;
-            textBox1.Text = "Nueva contraseña";
+            txtcontra.BackColor = Color.FromArgb(76, 147, 237);
+            txtcontra.BorderStyle = BorderStyle.None;
+            txtcontra.Enabled = false;
+            txtcontra.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtcontra.ForeColor = Color.White;
+            txtcontra.Location = new Point(493, 288);
+            txtcontra.Name = "txtcontra";
+            txtcontra.Size = new Size(201, 19);
+            txtcontra.TabIndex = 18;
+            txtcontra.Text = "Nueva contraseña";
+            txtcontra.TextChanged += txtcontra_TextChanged;
             // 
             // pictureBox2
             // 
@@ -158,7 +161,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 547);
             Controls.Add(pictureBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtcontra);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(btncambiar);
@@ -167,6 +170,7 @@
             Controls.Add(pictureBox3);
             Name = "Recuperar";
             Text = "Recuperar";
+            Load += Recuperar_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -181,7 +185,7 @@
         private TextBox txtcorreo;
         private Button btnRegistrarse;
         private PictureBox pictureBox3;
-        private TextBox textBox1;
+        private TextBox txtcontra;
         private PictureBox pictureBox2;
     }
 }
